@@ -23,17 +23,25 @@ public class Api {
     public User createUser(@FormParam("name") String name){
 
         //Não faça isso na vida real! Do ponto de vista de arquitetura, isso está errado.
+        Message message = new Message();
+        message.setText(" isso é uma mensagem");
+        message.persist();
+
         Channel channel = new Channel();
-        channel.setHash("aaaa");
+        channel.setHash("123456");
+        channel.addMessage(message);
         channel.persist();
 
         User user = new User();
         user.setName(name);
         user.addChannel(channel);
         user.persist();
+        
+
+    
+        //instanciar objetos aqui
+
         return user;
-
-
     }
     
 }
