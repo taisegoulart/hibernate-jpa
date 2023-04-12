@@ -47,5 +47,6 @@ public class User extends PanacheEntity {
     public void addChannel(Channel channel) {
         this.channels.add(channel);
     }   
+    //TODO: Por que o Thunderclient não retorna o hash e a mensagem? 
     
 }
