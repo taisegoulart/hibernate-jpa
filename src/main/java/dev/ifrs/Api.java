@@ -31,7 +31,7 @@ public class Api {
         channel.setHash("123456");
         channel.addMessage(message);
         channel.persist();
-
+        //cada um é um endpoint - user, message e channel --> tentar seprarar em 3 endpoints --> 3 métodos separados "public user create message, etc, procurar primerio o canal" --> método find faz isso pra gente
         User user = new User();
         user.setName(name);
         user.addChannel(channel);
@@ -40,7 +40,6 @@ public class Api {
 
     
         //instanciar objetos aqui
-
         return user;
     }
     
